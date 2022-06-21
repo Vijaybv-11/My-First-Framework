@@ -1,6 +1,5 @@
 package generic;
 
-import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;

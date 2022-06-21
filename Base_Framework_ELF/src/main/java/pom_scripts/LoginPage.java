@@ -3,9 +3,6 @@ package pom_scripts;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
-import generic.UtilityMethods;
 
 public class LoginPage extends BasePage {
 	
@@ -18,7 +15,6 @@ public class LoginPage extends BasePage {
 	@FindBy(className  ="email")
 	WebElement emailTF;
 	public void enterValueInEmail(String email) {
-		
 		enter_value(emailTF, email);
 	}
 	
@@ -28,10 +24,10 @@ public class LoginPage extends BasePage {
 		enter_value(pwdTF, pwd);
 	}
 	
-	@FindBy(xpath = "//input[@class='button-1 login-button']")
+	@FindBy(xpath = "//input[@value='Log in']")
 	WebElement LoginButton;
 	public void clickLoginButton() {
-		clickAction(LoginButton);
+		LoginButton.click();
 	}
 
 }

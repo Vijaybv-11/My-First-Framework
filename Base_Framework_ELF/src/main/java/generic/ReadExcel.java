@@ -44,12 +44,12 @@ public class ReadExcel implements FrameworkConstants{
 			
 		int col_count=sheet.getRow(0).getPhysicalNumberOfCells();
 		
-		Object[][] data=new Object[row_count][col_count];
+		Object[][] data=new Object[row_count-1][col_count];
 		
-		for(int r=0;r<=row_count-1;r++) {
-			Row row=sheet.getRow(r);
-			for(int c=0;c<row.getLastCellNum();c++) {
-				data[r][c]=row.getCell(c).getStringCellValue();
+		for(int r=1;r<=row_count-1;r++) {
+			
+			for(int c=0;c<col_count;c++) {
+				data[r-1][c]=sheet.getRow(r).getCell(c).toString();
 			}
 		}
 		book.close();

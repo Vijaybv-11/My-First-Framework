@@ -29,7 +29,7 @@ public class TestScript1 extends Base_Test{
 	
 	@DataProvider(name = "testdata")
 	public Object[][] getTestData() throws IOException {
-		Object [][]testdata=ReadExcel.getMultipleData("Sheet1");
+		Object [][]testdata=ReadExcel.getMultipleData("Login");
 		return testdata;
 	}
 
